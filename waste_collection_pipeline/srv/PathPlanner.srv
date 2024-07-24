@@ -1,0 +1,6 @@
+float32 axis_d_start
+float32 axis_c_start
+float32 axis_d_end
+float32 axis_c_end
+---
+trajectory_msgs/JointTrajectory path

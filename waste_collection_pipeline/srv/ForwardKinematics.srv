@@ -1,0 +1,8 @@
+float64 axis_e
+float64 axis_d
+float64 axis_c
+float64 axis_b
+---
+float64[] x
+float64[] y
+float64[] z
