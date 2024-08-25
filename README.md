@@ -2,6 +2,8 @@
 
 ## Environment Setup:
 
+![image](https://github.com/user-attachments/assets/2d25fc98-3713-4953-b08d-357243eec0ed)
+
 Install and setup Stonefish simulator: <br />
 https://github.com/patrykcieslak/stonefish
 
