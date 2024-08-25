@@ -1,0 +1,17 @@
+controller_list:
+  - name: fake_alpha_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - alpha_axis_e
+      - alpha_axis_d
+      - alpha_axis_c
+      - alpha_axis_b
+  - name: fake_alpha_gripper_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - alpha_axis_a
+initial:  # Define initial robot poses per group
+  - group: alpha_arm
+    pose: home
+  - group: alpha_gripper
+    pose: opened

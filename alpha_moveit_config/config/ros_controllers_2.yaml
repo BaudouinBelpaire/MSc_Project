@@ -1,0 +1,54 @@
+# Publish joint states
+
+joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+# Configure effort-based trajectory controller for the Panda arm
+alpha_arm_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+        - alpha_axis_e
+        - alpha_axis_d
+        - alpha_axis_c
+        - alpha_axis_b
+    gains:
+        alpha_axis_e: { p: 15000, d: 50, i: 0.01 }
+        alpha_axis_d: { p: 15000, d: 50, i: 0.01 }
+        alpha_axis_c: { p: 15000, d: 50, i: 0.01 }
+        alpha_axis_b: { p: 15000, d: 50, i: 0.01 }
+
+    state_publish_rate: 25
+    constraints:
+        goal_time: 2.0
+
+# Configure effort-based trajectory controller for the Panda hand
+alpha_gripper_controller:
+    type: effort_controllers/JointTrajectoryController
+    joints:
+        - alpha_axis_a
+
+    gains:
+        alpha_axis_a: { p: 5, d: 1.0, i: 0 }
+
+    state_publish_rate: 25
+
+# Declare available controllers for MoveIt
+controller_list:
+    - name: alpha_arm_controller
+      action_ns: follow_joint_trajectory
+      type: FollowJointTrajectory
+      default: true
+      joints:
+        - alpha_axis_e
+        - alpha_axis_d
+        - alpha_axis_c
+        - alpha_axis_b
+
+
+    - name: alpha_gripper_controller
+      action_ns: follow_joint_trajectory
+      type: FollowJointTrajectory
+      default: true
+      joints:
+        - alpha_axis_a

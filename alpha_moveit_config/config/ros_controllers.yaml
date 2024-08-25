@@ -1,0 +1,28 @@
+arm_position_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - alpha_axis_e
+    - alpha_axis_d
+    - alpha_axis_c
+    - alpha_axis_b
+  gains:
+    alpha_axis_e:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    alpha_axis_d:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    alpha_axis_c:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    alpha_axis_b:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

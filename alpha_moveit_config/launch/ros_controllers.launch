@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find alpha_moveit_config)/config/ros_controllers_2.yaml" command="load"/>
+
+  <!-- Load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" ns="/alpha"
+    output="screen" args="alpha_arm_controller alpha_gripper_controller joint_state_controller"/> 
+
+</launch>

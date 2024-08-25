@@ -1,0 +1,17 @@
+<launch>
+  <!-- Load Gazebo with an empty world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <!-- Load the robot description parameter -->
+  
+  <param name="robot_description" command="$(find xacro)/xacro '$(find bpl_alpha_description)/urdf/alpha_5.urdf.xacro'" />
+  
+  <!-- Spawn the robot in Gazebo -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot -x 0 -y 0 -z 0.1" output="screen" />
+</launch>

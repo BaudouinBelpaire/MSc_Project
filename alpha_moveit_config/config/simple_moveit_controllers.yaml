@@ -1,0 +1,10 @@
+controller_list:
+  - name: arm_position_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - alpha_axis_e
+      - alpha_axis_d
+      - alpha_axis_c
+      - alpha_axis_b
