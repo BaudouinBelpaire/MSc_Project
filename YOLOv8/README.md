@@ -3,7 +3,7 @@
 ## Preprocessing:
 Download the plastic dataset at: https://datasetninja.com/plastic-bottles
 
-Run the preprocessing of the dataset using the "convert_format_file.py" script.
+Run the preprocessing of the dataset using the 'convert_format_file.py' script.
 
 Inspect the remaining images with the 'dataset_inspection.py' script.
 
