@@ -15,17 +15,17 @@ Launch the BlueBoat Simulation:
 
 ## Waste Detection:
 
-Install and setup the ROS wrapper for ZED camera as follow:
+Install and setup the ROS wrapper for ZED camera:
 https://github.com/stereolabs/zed-ros-wrapper
 
 Launch waste detection node:
-'roslaunch waste_collection_pipeline transform.launch'
-'roslaunch waste_collection_pipeline waste_detection.launch' 
+```roslaunch waste_collection_pipeline transform.launch
+roslaunch waste_collection_pipeline waste_detection.launch```
 
 ## Waste collection: 
 
 Launch the service server to compute IK and FK for arm kinematics:
-'roslaunch waste_collection_pipeline kinematics.launch'
+`roslaunch waste_collection_pipeline kinematics.launch`
 
 Launch waste collection script to collect wastes:
-'rosrun waste_collection_pipeline main.py' 
+`rosrun waste_collection_pipeline main.py`
