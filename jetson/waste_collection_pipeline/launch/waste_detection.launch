@@ -1,6 +1,0 @@
-<launch>        
-   <include file="$(find zed_wrapper)/launch/zed.launch" />
-   <node name="yolov8_ros_node" pkg="waste_collection_pipeline" type="yolov8.py" />
-   <node name="pixel_to_point_node" pkg="waste_collection_pipeline" type="pixel_to_point.py" />
-   <node name="coordinate_transform_node" pkg="waste_collection_pipeline" type="tf_node.py" />
-</launch>
