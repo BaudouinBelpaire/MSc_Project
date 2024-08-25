@@ -1,0 +1,8 @@
+float32 axis_d_start
+float32 axis_c_start
+float32 axis_d_end
+float32 axis_c_end
+---
+trajectory_msgs/JointTrajectory arm_path
+trajectory_msgs/JointTrajectory boat_path
+float64 duration

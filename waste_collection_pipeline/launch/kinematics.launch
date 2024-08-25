@@ -1,0 +1,5 @@
+<launch>
+    <node pkg = "waste_collection_pipeline"  type = "arm_inverse_kinematics.py" name = "inverse_kinematics_service"/>
+    <node pkg = "waste_collection_pipeline"  type = "arm_forward_kinematics.py" name = "forward_kinematics_server"/>
+    <node pkg = "waste_collection_pipeline"  type = "path_planner_service.py" name = "joint_path_planner_server"/>
+</launch>
