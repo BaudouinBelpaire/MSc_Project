@@ -19,8 +19,10 @@ Install and setup the ROS wrapper for ZED camera:
 https://github.com/stereolabs/zed-ros-wrapper
 
 Launch waste detection node:
-```roslaunch waste_collection_pipeline transform.launch
-roslaunch waste_collection_pipeline waste_detection.launch```
+```
+roslaunch waste_collection_pipeline transform.launch
+roslaunch waste_collection_pipeline waste_detection.launch
+```
 
 ## Waste collection: 
 
