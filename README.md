@@ -11,7 +11,8 @@ https://github.com/oceansystemslab/HeriotWattStonefishSim
 Replace the launch and scenarios files located in the Simulation folder in the HeriotWattStonefishSim folder previously cloned.
 
 Launch the BlueBoat Simulation:
-'roslaunch cola2_stonefish blueboat_simulation.launch' 
+'''bash 
+roslaunch cola2_stonefish blueboat_simulation.launch''' 
 
 ## Waste Detection:
 
