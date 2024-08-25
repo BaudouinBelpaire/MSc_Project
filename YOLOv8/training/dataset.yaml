@@ -1,0 +1,6 @@
+train: /home/baudouin/Dissertation/yolov8/dataset/images/train/
+val: /home/baudouin/Dissertation/yolov8/dataset/images/val/
+test: /home/baudouin/Dissertation/yolov8/dataset/images/test/
+
+nc: 1  # number of classes
+names: ['bottle']
