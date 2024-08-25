@@ -1,4 +1,6 @@
-# Waste Collection Pipeline on BlueBoat:
+# Waste Collection Pipeline on BlueBoat
+
+## Environment Setup:
 
 Install and setup Stonefish simulator:
 https://github.com/patrykcieslak/stonefish
