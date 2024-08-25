@@ -1,7 +1,7 @@
 # YOLOv8 Waste Detection
 
 ## Preprocessing:
-Download the plastic dataset at: https://datasetninja.com/plastic-bottles
+Download the plastic dataset: https://datasetninja.com/plastic-bottles
 
 Run the preprocessing of the dataset using the 'convert_format_file.py' script.
 
