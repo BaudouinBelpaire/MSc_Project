@@ -1,9 +1,0 @@
-<launch>
-
-<node pkg="tf2_ros" type="static_transform_publisher" name="vehicle_to_camera_tf" 
-        args="0 0 0.2 0 1.05 0.0 base_frame camera_frame" />
-<node pkg="tf2_ros" type="static_transform_publisher" name="vehicle_to_alpha_base_tf" 
-        args="0 0 0 0 0.0 0 base_frame alpha_base_frame" />
-<node pkg = "waste_collection_pipeline"  type = "tf_node.py" name = "coordinate_transform_node"/>
-
-</launch>
