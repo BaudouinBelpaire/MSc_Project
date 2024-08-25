@@ -1,0 +1,23 @@
+<launch>
+    <!-- Configurable arguments -->
+    <arg name="robot_name" default="blueboat"/>
+    
+    <!-- Namespace with robot name -->
+    <group ns="$(arg robot_name)">
+        <!-- Run Simulator -->
+        <include file="$(find stonefish_ros)/launch/simulator.launch">
+            <arg name="simulation_data" value="$(find cola2_stonefish)/data"/>
+            <arg name="scenario_description" value="$(find cola2_stonefish)/scenarios/blueboat_tank.scn"/>
+            <arg name="simulation_rate" value="100.0"/>
+            <arg name="graphics_resolution" value="1200 800"/>
+            <arg name="graphics_quality" value="low"/>
+        </include>
+    </group>
+    <!--<node name="odometry_node" pkg="navigation" type="odom.py"/>-->
+    <node name="renamed_joints" pkg="camera_detection" type="rename_joint_states.py"/>
+    <node name="pointcloud" pkg="camera_detection" type="imageToPointCloud.py"/>
+    <node pkg="tf2_ros" type="static_transform_publisher" name="vehicle_to_camera_tf" 
+        args="0.0 0.3 -0.45 -1.05 0.0 0.0 base_frame camera_frame" />
+    <node pkg="tf2_ros" type="static_transform_publisher" name="vehicle_to_alpha_base_tf" 
+        args="0.0 0.3 -0.25 3.14 0.0 1.57 base_frame alpha_base_frame" />
+</launch>
