@@ -7,7 +7,7 @@
 Install and setup Stonefish simulator: <br />
 https://github.com/patrykcieslak/stonefish
 
-Clone the repository to have access to the BlueBoat simulation model on Stonefish: <br />
+Clone the repository to access the BlueBoat simulation model on Stonefish: <br />
 https://github.com/oceansystemslab/HeriotWattStonefishSim
 
 Replace the launch and scenarios files located in the Simulation folder in the HeriotWattStonefishSim folder previously cloned.
